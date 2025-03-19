@@ -1,0 +1,11 @@
+ul li::marker {
+    color: rgb(44, 136, 207);
+}
+
+ol li::marker {
+    color: rgb(44, 136, 207);
+}
+
+ul li ul li::marker {
+    color: rgb(162,160,161);
+}
