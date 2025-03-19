@@ -701,3 +701,34 @@ class: text-center
 [Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
 
 <PoweredBySlidev mt-10 />
+
+---
+layout: two-cols
+layoutClass: gap-16
+---
+
+# Presentation Link
+
+<QRCode
+    :width="300"
+    :height="300"
+    type="svg"
+    data="https://varadinov.github.io/presentation-as-code/"
+    :margin="0"
+    :imageOptions="{ margin: 10 }"
+    :dotsOptions="{ type: 'extra-rounded', color: 'black' }"
+/>
+
+::right::
+
+# Demo App Code
+
+<QRCode
+    :width="300"
+    :height="300"
+    type="svg"
+    data="https://github.com/varadinov/presentation-as-code-app"
+    :margin="0"
+    :imageOptions="{ margin: 10 }"
+    :dotsOptions="{ type: 'extra-rounded', color: 'black' }"
+/>
