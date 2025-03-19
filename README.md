@@ -1,7 +1,7 @@
 # Presentation as Code Demo  with [Slidev](https://github.com/slidevjs/slidev) P
+This presentation is created for AIF.Europe MeetUp in Sofia, Bulgaria 19.05.2025
 
 To start the slide show:
-
 - `npm install`
 - `npm run dev`
 
