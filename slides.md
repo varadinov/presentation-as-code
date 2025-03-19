@@ -21,14 +21,22 @@ Presentation slides for developers (Slidev)
 </div>
 
 <div class="abs-br m-6 text-xl">
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
+  <a href="https://github.com/varadinov/presentation-as-code" target="_blank" class="slidev-icon-btn">
     <carbon:logo-github />
   </a>
 </div>
 
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+---
+layout: default
+---
+# About Me
+* Name
+  - Borislav Varadinov​
+* Company
+  - Dell Technologies​
+* Job Title​
+  - Senior Principal Engineer​
+
 
 ---
 transition: fade-out
@@ -75,6 +83,7 @@ transition: fade-out
 
 # What is Slidev?
 
+
 Slidev is a slides maker and presenter designed for developers, consist of the following features
 
 - 📝 **Text-based** - focus on the content with Markdown, and then style them later
@@ -94,21 +103,13 @@ You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/features/slide-scope-style
 -->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(22deg, #000000 10%, #808080 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
+
 
 <!--
 Here is another comment.
 -->
+
+
 
 ---
 transition: slide-up
@@ -480,6 +481,81 @@ theme: seriph
 Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
 check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
 
+---
+transition: slide-up
+---
+
+<div class="text">
+  <span style="--i:1">C</span>
+  <span style="--i:2">S</span>
+  <span style="--i:3">S</span>
+  <span style="--i:4">&</span>
+  <span style="--i:5">H</span>
+  <span style="--i:6">T</span>
+  <span style="--i:7">M</span>
+  <span style="--i:8">L</span>
+</div>
+
+<i>"With great power comes great responsibility."</i>
+
+* Slide CSS
+```html
+
+
+
+<style>
+
+.text span {
+  font-size: 60px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: #111;
+  animation: zoomup 4s linear infinite;
+  animation-delay: calc(200ms * var(--i));
+}
+
+</style>
+
+```
+
+<br />
+
+* Global CSS
+```
+style.css
+```
+
+<style>
+
+.text span {
+  font-size: 25px;
+  padding: 0 10px;
+  text-transform: uppercase;
+  color: #111;
+  animation: zoomup 4s linear infinite;
+  animation-delay: calc(200ms * var(--i));
+}
+
+@keyframes zoomup {
+  0%,
+  100% {
+    color:rgb(240, 237, 237);
+    filter: blur(0.1px);
+    text-shadow: 0 0 10px #4d4e4e, 0 0 20px #4d4e4e, 0 0 30px #4d4e4e,
+      0 0 40px #4d4e4e, 0 0 60px #4d4e4e, 0 0 80px #4d4e4e, 0 0 100px #4d4e4e,
+      0 0 120px #4d4e4e;
+  }
+
+  10%,
+  95% {
+    filter: blur(0);
+    color: #111;
+    text-shadow: none;
+  }
+}
+
+</style>
+
 
 ---
 
@@ -728,6 +804,22 @@ layoutClass: gap-16
     :height="300"
     type="svg"
     data="https://github.com/varadinov/presentation-as-code-app"
+    :margin="0"
+    :imageOptions="{ margin: 10 }"
+    :dotsOptions="{ type: 'extra-rounded', color: 'black' }"
+/>
+
+---
+layout: default
+---
+
+# LinkedIn Profile
+
+<QRCode
+    :width="300"
+    :height="300"
+    type="svg"
+    data="https://www.linkedin.com/in/borislav-varadinov/"
     :margin="0"
     :imageOptions="{ margin: 10 }"
     :dotsOptions="{ type: 'extra-rounded', color: 'black' }"
