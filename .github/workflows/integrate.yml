@@ -31,7 +31,7 @@ jobs:
 
     - name: Install dependencies
       working-directory: ./
-      run: SLIDEV_BASE_PATH="/$(echo ${{ github.repository }} | cut -d'/' -f2)" npm run build
+      run: npm run build -- --base "/$(echo ${{ github.repository }} | cut -d'/' -f2)"
 
     - name: Setup Pages
       uses: actions/configure-pages@v5
