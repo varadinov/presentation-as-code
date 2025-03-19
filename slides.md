@@ -198,7 +198,7 @@ The title will be inferred from your slide content, or you can override it with 
 
 ::right::
 
-<Toc text-sm minDepth="1" maxDepth="1" />
+<Toc text-sm minDepth="1" maxDepth="1" columns="2"/>
 
 
 ---
